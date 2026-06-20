@@ -1,0 +1,206 @@
+Last login: Sat Jun 20 13:47:59 on ttys000
+23s1097@o-lt-005921 ~ % cd desktop
+23s1097@o-lt-005921 desktop % mkdir log
+23s1097@o-lt-005921 desktop % cd log
+23s1097@o-lt-005921 log % git init
+Initialized empty Git repository in /Users/23s1097/Desktop/log/.git/
+23s1097@o-lt-005921 log % git config user.name "jash"
+23s1097@o-lt-005921 log % git config user.email "jash@gmail.com"
+23s1097@o-lt-005921 log % git confog user.name
+git: 'confog' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+23s1097@o-lt-005921 log % config user.name
+zsh: command not found: config
+23s1097@o-lt-005921 log % git config user.name
+jash
+23s1097@o-lt-005921 log % touch a{1..3}.txt
+23s1097@o-lt-005921 log % ls
+a1.txt	a2.txt	a3.txt
+23s1097@o-lt-005921 log % git add .
+23s1097@o-lt-005921 log % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   a1.txt
+	new file:   a2.txt
+	new file:   a3.txt
+
+23s1097@o-lt-005921 log % git commit -m "added a1.txt" a1.txt
+[main (root-commit) b8e48ba] added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+23s1097@o-lt-005921 log % git commit -m "added a2.txt" a2.txt
+[main 07a303c] added a2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+23s1097@o-lt-005921 log % git commit -m "added a3.txt" a3.txt
+[main 785fd49] added a3.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a3.txt
+23s1097@o-lt-005921 log % git log --oneline
+785fd49 (HEAD -> main) added a3.txt
+07a303c added a2.txt
+b8e48ba added a1.txt
+23s1097@o-lt-005921 log % git remote add origin https://github.com/jashj4624-netizen/basics.git
+23s1097@o-lt-005921 log % git remote -v
+origin	https://github.com/jashj4624-netizen/basics.git (fetch)
+origin	https://github.com/jashj4624-netizen/basics.git (push)
+23s1097@o-lt-005921 log % nano a1.txt
+23s1097@o-lt-005921 log % cat a1.txt
+Hye hello
+
+23s1097@o-lt-005921 log % git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 564 bytes | 564.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/jashj4624-netizen/basics.git
+ * [new branch]      main -> main
+23s1097@o-lt-005921 log % nano a1.txt         
+23s1097@o-lt-005921 log % cat a1.txt          
+Hye hello
+
+23s1097@o-lt-005921 log % git push origin main
+Everything up-to-date
+23s1097@o-lt-005921 log % nano a1.txt                                                          
+23s1097@o-lt-005921 log % git add a1.txt
+23s1097@o-lt-005921 log % git commit -m "added new  a1.txt" a1.txt                            
+[main b6e0ec5] added new  a1.txt
+ 1 file changed, 2 insertions(+)
+23s1097@o-lt-005921 log % git push origin main                    
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/jashj4624-netizen/basics.git
+   785fd49..b6e0ec5  main -> main
+23s1097@o-lt-005921 log % cd ..
+23s1097@o-lt-005921 desktop % mkdir log1   
+23s1097@o-lt-005921 desktop % cd log1
+23s1097@o-lt-005921 log1 % git branch
+23s1097@o-lt-005921 log1 % git init   
+Initialized empty Git repository in /Users/23s1097/Desktop/log1/.git/
+23s1097@o-lt-005921 log1 % git branch
+23s1097@o-lt-005921 log1 % git config user.name "kiii"
+23s1097@o-lt-005921 log1 % git config user.email "kiii@gmail.com"
+23s1097@o-lt-005921 log1 % git config suer.name
+23s1097@o-lt-005921 log1 % git config user.name
+kiii
+23s1097@o-lt-005921 log1 % touch b1.txt
+23s1097@o-lt-005921 log1 % git add .
+23s1097@o-lt-005921 log1 % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   b1.txt
+
+23s1097@o-lt-005921 log1 % git commit -m "added b1.txt"
+[main (root-commit) f86c118] added b1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b1.txt
+23s1097@o-lt-005921 log1 % git log --oneline
+f86c118 (HEAD -> main) added b1.txt
+23s1097@o-lt-005921 log1 % git status
+On branch main
+nothing to commit, working tree clean
+23s1097@o-lt-005921 log1 % git pull origin https://github.com/jashj4624-netizen/basics.git           
+fatal: invalid refspec 'https://github.com/jashj4624-netizen/basics.git'
+23s1097@o-lt-005921 log1 % git pull origin main https://github.com/jashj4624-netizen/basics.git
+fatal: invalid refspec 'https://github.com/jashj4624-netizen/basics.git'
+23s1097@o-lt-005921 log1 % ls  
+b1.txt
+23s1097@o-lt-005921 log1 % git log --oneline
+f86c118 (HEAD -> main) added b1.txt
+23s1097@o-lt-005921 log1 % git remote add origin https://github.com/jashj4624-netizen/basics.git
+23s1097@o-lt-005921 log1 % git remote -v
+origin	https://github.com/jashj4624-netizen/basics.git (fetch)
+origin	https://github.com/jashj4624-netizen/basics.git (push)
+23s1097@o-lt-005921 log1 % git push origin main
+To https://github.com/jashj4624-netizen/basics.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/jashj4624-netizen/basics.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+23s1097@o-lt-005921 log1 % git reset --hard f86c118
+HEAD is now at f86c118 added b1.txt
+23s1097@o-lt-005921 log1 % git log --oneline
+f86c118 (HEAD -> main) added b1.txt
+23s1097@o-lt-005921 log1 % git status
+On branch main
+nothing to commit, working tree clean
+23s1097@o-lt-005921 log1 % git log --oneline
+f86c118 (HEAD -> main) added b1.txt
+23s1097@o-lt-005921 log1 % cd ..
+23s1097@o-lt-005921 desktop % mkdir log2
+23s1097@o-lt-005921 desktop % cd log2
+23s1097@o-lt-005921 log2 % git init
+Initialized empty Git repository in /Users/23s1097/Desktop/log2/.git/
+23s1097@o-lt-005921 log2 % git config user.name "ajsh"
+23s1097@o-lt-005921 log2 % git config user.email "ajsh@gmail.ocm"
+23s1097@o-lt-005921 log2 % git add .
+23s1097@o-lt-005921 log2 % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+23s1097@o-lt-005921 log2 % git pull origin https://github.com/jashj4624-netizen/basics.git
+fatal: invalid refspec 'https://github.com/jashj4624-netizen/basics.git'
+23s1097@o-lt-005921 log2 % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+23s1097@o-lt-005921 log2 % git log --oneline
+fatal: your current branch 'main' does not have any commits yet
+23s1097@o-lt-005921 log2 % git remote add origin https://github.com/jashj4624-netizen/basics.git
+23s1097@o-lt-005921 log2 % git remote -v
+origin	https://github.com/jashj4624-netizen/basics.git (fetch)
+origin	https://github.com/jashj4624-netizen/basics.git (push)
+23s1097@o-lt-005921 log2 % git pull origin https://github.com/jashj4624-netizen/basics.git
+fatal: invalid refspec 'https://github.com/jashj4624-netizen/basics.git'
+23s1097@o-lt-005921 log2 % git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+23s1097@o-lt-005921 log2 % git log --oneline
+fatal: your current branch 'main' does not have any commits yet
+23s1097@o-lt-005921 log2 % git pull origin main                                           
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 1), reused 10 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (10/10), 795 bytes | 99.00 KiB/s, done.
+From https://github.com/jashj4624-netizen/basics
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+23s1097@o-lt-005921 log2 % git status\
+> git status
+git: 'statusgit' is not a git command. See 'git --help'.
+23s1097@o-lt-005921 log2 % git status
+On branch main
+nothing to commit, working tree clean
+23s1097@o-lt-005921 log2 % git log --oneline
+b6e0ec5 (HEAD -> main, origin/main) added new  a1.txt
+785fd49 added a3.txt
+07a303c added a2.txt
+b8e48ba added a1.txt
